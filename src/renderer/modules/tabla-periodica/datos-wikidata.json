@@ -1,0 +1,2466 @@
+{
+ "fuente": "Wikidata (https://www.wikidata.org), consulta SPARQL pública",
+ "licencia": "CC0 1.0 (dominio público)",
+ "obtenido": "2026-11-04",
+ "nota": "Cada magnitud puede tener varios valores (varias declaraciones); conReferencia indica si la declaración cita una fuente. Sin referencia = valor de Wikidata sin fuente verificable.",
+ "elementos": [
+  {
+   "z": 1,
+   "fusionK": [
+    {
+     "v": 14.01,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 20.28,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 0.08987,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1766,
+   "descubridores": "Henry Cavendish"
+  },
+  {
+   "z": 2,
+   "fusionK": [
+    {
+     "v": 0.95,
+     "conReferencia": false
+    },
+    {
+     "v": 0.927778,
+     "conReferencia": false
+    },
+    {
+     "v": 1.1,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4.22222,
+     "conReferencia": false
+    },
+    {
+     "v": 4.25,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 0.1785,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1868,
+   "descubridores": "Joseph Norman Lockyer · Pierre Janssen · William Ramsay"
+  },
+  {
+   "z": 3,
+   "fusionK": [
+    {
+     "v": 453.65,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1603.15,
+     "conReferencia": false
+    },
+    {
+     "v": 1590.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 534,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1817,
+   "descubridores": "Johann Arfvedson"
+  },
+  {
+   "z": 4,
+   "fusionK": [
+    {
+     "v": 1560.37,
+     "conReferencia": true
+    },
+    {
+     "v": 1551.15,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3243.15,
+     "conReferencia": false
+    },
+    {
+     "v": 2773.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1850,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1798,
+   "descubridores": "Friedrich Wöhler · Louis Nicolas Vauquelin · Antoine Bussy"
+  },
+  {
+   "z": 5,
+   "fusionK": [
+    {
+     "v": 2348.15,
+     "conReferencia": true
+    },
+    {
+     "v": 2453.15,
+     "conReferencia": true
+    },
+    {
+     "v": 2350.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4273.15,
+     "conReferencia": true
+    },
+    {
+     "v": 3923.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 2080,
+     "conReferencia": false
+    },
+    {
+     "v": 2460,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1892,
+   "descubridores": "Humphry Davy"
+  },
+  {
+   "z": 6,
+   "densidadKgM3": [
+    {
+     "v": 2260,
+     "conReferencia": false
+    },
+    {
+     "v": 3510,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1789,
+   "descubridores": "Antoine Laurent de Lavoisier"
+  },
+  {
+   "z": 7,
+   "fusionK": [
+    {
+     "v": 63.05,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 77.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 946.244,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1772,
+   "descubridores": "Daniel Rutherford"
+  },
+  {
+   "z": 8,
+   "fusionK": [
+    {
+     "v": 54.8,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 90.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1804.13,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1774,
+   "descubridores": "Carl Wilhelm Scheele"
+  },
+  {
+   "z": 9,
+   "fusionK": [
+    {
+     "v": 53.7056,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 84.8167,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1810,
+   "descubridores": "André-Marie Ampère · Henri Moissan"
+  },
+  {
+   "z": 10,
+   "fusionK": [
+    {
+     "v": 24.55,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 27.15,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1204,
+     "conReferencia": false
+    },
+    {
+     "v": 0.90035,
+     "conReferencia": false
+    },
+    {
+     "v": 1444,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1898,
+   "descubridores": "Morris Travers · William Ramsay"
+  },
+  {
+   "z": 11,
+   "fusionK": [
+    {
+     "v": 370.93,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1156.09,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1033.49,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1807,
+   "descubridores": "Humphry Davy"
+  },
+  {
+   "z": 12,
+   "fusionK": [
+    {
+     "v": 922.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1373.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1801.8,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1755,
+   "descubridores": "Joseph Black"
+  },
+  {
+   "z": 13,
+   "fusionK": [
+    {
+     "v": 933.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2600.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 2700,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1825,
+   "descubridores": "Hans Christian Ørsted · Humphry Davy"
+  },
+  {
+   "z": 14,
+   "fusionK": [
+    {
+     "v": 1683.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2628.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 2329,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1823,
+   "descubridores": "Jöns Jacob Berzelius"
+  },
+  {
+   "z": 15,
+   "densidadKgM3": [
+    {
+     "v": 2232.61,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1669,
+   "descubridores": "Hennig Brand"
+  },
+  {
+   "z": 16,
+   "fusionK": [
+    {
+     "v": 388.36,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 718.2,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 2070,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1777,
+   "descubridores": "Antoine Laurent de Lavoisier"
+  },
+  {
+   "z": 17,
+   "fusionK": [
+    {
+     "v": 171.6,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 238.5,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 2086.5,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1774,
+   "descubridores": "Carl Wilhelm Scheele"
+  },
+  {
+   "z": 18,
+   "fusionK": [
+    {
+     "v": 83.81,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 87.3,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1894,
+   "descubridores": "Lord Rayleigh · William Ramsay"
+  },
+  {
+   "z": 19,
+   "fusionK": [
+    {
+     "v": 336.4,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1038.7,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 828,
+     "conReferencia": true
+    },
+    {
+     "v": 862,
+     "conReferencia": true
+    },
+    {
+     "v": 856,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1807,
+   "descubridores": "Humphry Davy"
+  },
+  {
+   "z": 20,
+   "fusionK": [
+    {
+     "v": 1112,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1757,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1534.82,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1808,
+   "descubridores": "Humphry Davy"
+  },
+  {
+   "z": 21,
+   "fusionK": [
+    {
+     "v": 1814,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3110,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 2984.58,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1879,
+   "descubridores": "Lars Fredrik Nilson"
+  },
+  {
+   "z": 22,
+   "fusionK": [
+    {
+     "v": 1941,
+     "conReferencia": false
+    },
+    {
+     "v": 1943.15,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3560,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 4670.17,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1791,
+   "descubridores": "Friedrich Wöhler"
+  },
+  {
+   "z": 23,
+   "fusionK": [
+    {
+     "v": 2160.15,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3650.15,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6377.54,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1801,
+   "descubridores": "Andrés Manuel del Río Fernández"
+  },
+  {
+   "z": 24,
+   "fusionK": [
+    {
+     "v": 2180.37,
+     "conReferencia": true
+    },
+    {
+     "v": 2130.05,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2945,
+     "conReferencia": true
+    },
+    {
+     "v": 2915.37,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7140,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1797,
+   "descubridores": "Louis Nicolas Vauquelin"
+  },
+  {
+   "z": 25,
+   "fusionK": [
+    {
+     "v": 1517.04,
+     "conReferencia": true
+    },
+    {
+     "v": 1516.15,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2235.37,
+     "conReferencia": true
+    },
+    {
+     "v": 2234.15,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7200,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1774,
+   "descubridores": "Johan Gottlieb Gahn"
+  },
+  {
+   "z": 26,
+   "fusionK": [
+    {
+     "v": 1811.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3134.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7874,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": -5000
+  },
+  {
+   "z": 27,
+   "fusionK": [
+    {
+     "v": 1765.93,
+     "conReferencia": true
+    },
+    {
+     "v": 1768,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3200,
+     "conReferencia": true
+    },
+    {
+     "v": 3373.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8920,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1735,
+   "descubridores": "Georg Brandt"
+  },
+  {
+   "z": 28,
+   "fusionK": [
+    {
+     "v": 1728.15,
+     "conReferencia": true
+    },
+    {
+     "v": 1828.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3110.37,
+     "conReferencia": true
+    },
+    {
+     "v": 3186.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8900,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1751,
+   "descubridores": "Axel Fredrik Cronstedt"
+  },
+  {
+   "z": 29,
+   "fusionK": [
+    {
+     "v": 1355.93,
+     "conReferencia": true
+    },
+    {
+     "v": 1358.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2868.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8940,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": -7000
+  },
+  {
+   "z": 30,
+   "fusionK": [
+    {
+     "v": 692.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1180.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7530.86,
+     "conReferencia": true
+    }
+   ]
+  },
+  {
+   "z": 31,
+   "fusionK": [
+    {
+     "v": 302.91,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2673,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6095,
+     "conReferencia": true
+    },
+    {
+     "v": 5904,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1875,
+   "descubridores": "Paul Emile Lecoq de Boisbaudran"
+  },
+  {
+   "z": 32,
+   "fusionK": [
+    {
+     "v": 1211.4,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3106,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 5280.21,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1886,
+   "descubridores": "Clemens Winkler"
+  },
+  {
+   "z": 33,
+   "fusionK": [
+    {
+     "v": 885.928,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 5730,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1300,
+   "descubridores": "Alberto Magno"
+  },
+  {
+   "z": 34,
+   "fusionK": [
+    {
+     "v": 473.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 958.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 4280,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1817,
+   "descubridores": "Jöns Jacob Berzelius · Johan Gottlieb Gahn"
+  },
+  {
+   "z": 35,
+   "fusionK": [
+    {
+     "v": 265.8,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 331.7,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 3995.22,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1825,
+   "descubridores": "Carl Jacob Löwig · Antoine-Jérôme Balard"
+  },
+  {
+   "z": 36,
+   "fusionK": [
+    {
+     "v": 115.79,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 121.2,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1898,
+   "descubridores": "Morris Travers · William Ramsay"
+  },
+  {
+   "z": 37,
+   "fusionK": [
+    {
+     "v": 312.46,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 960,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1532,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1861,
+   "descubridores": "Robert Bunsen · Gustav Kirchhoff"
+  },
+  {
+   "z": 38,
+   "fusionK": [
+    {
+     "v": 1050,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1653,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 2578.21,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1787,
+   "descubridores": "William Cruickshank"
+  },
+  {
+   "z": 39,
+   "fusionK": [
+    {
+     "v": 1773.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3200.37,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 4470,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1787,
+   "descubridores": "Friedrich Wöhler · Johan Gadolin"
+  },
+  {
+   "z": 40,
+   "fusionK": [
+    {
+     "v": 2130.37,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3850.37,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6510,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1789,
+   "descubridores": "Jöns Jacob Berzelius · Martin Heinrich Klaproth · Jan Hendrik de Boer · Anton Eduard van Arkel"
+  },
+  {
+   "z": 41,
+   "fusionK": [
+    {
+     "v": 2750,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 5017,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8449.67,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1801,
+   "descubridores": "Charles Hatchett"
+  },
+  {
+   "z": 42,
+   "fusionK": [
+    {
+     "v": 2895.37,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 5098.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 10280,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1778,
+   "descubridores": "Carl Wilhelm Scheele"
+  },
+  {
+   "z": 43,
+   "fusionK": [
+    {
+     "v": 2443.15,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4538,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 11418.5,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1937,
+   "descubridores": "Emilio Gino Segrè · Carlo Perrier"
+  },
+  {
+   "z": 44,
+   "fusionK": [
+    {
+     "v": 2607,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4423,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 12385,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1844,
+   "descubridores": "Karl Ernst Claus"
+  },
+  {
+   "z": 45,
+   "fusionK": [
+    {
+     "v": 2239.26,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4000.37,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 12410,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1803,
+   "descubridores": "William Hyde Wollaston"
+  },
+  {
+   "z": 46,
+   "fusionK": [
+    {
+     "v": 1828.05,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3233,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 11759,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1803,
+   "descubridores": "William Hyde Wollaston"
+  },
+  {
+   "z": 47,
+   "fusionK": [
+    {
+     "v": 1233.71,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2273.15,
+     "conReferencia": true
+    },
+    {
+     "v": 1234.93,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 10490,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": -5000
+  },
+  {
+   "z": 48,
+   "fusionK": [
+    {
+     "v": 594.22,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1038,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8650,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1817,
+   "descubridores": "Karl Samuel Leberecht Hermann · Friedrich Stromeyer"
+  },
+  {
+   "z": 49,
+   "fusionK": [
+    {
+     "v": 429.817,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2348.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7310,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1863,
+   "descubridores": "Ferdinand Reich · Hieronymous Theodor Richter"
+  },
+  {
+   "z": 50,
+   "fusionK": [
+    {
+     "v": 505.05,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2780.37,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7280,
+     "conReferencia": true
+    }
+   ]
+  },
+  {
+   "z": 51,
+   "fusionK": [
+    {
+     "v": 903.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1908.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6690,
+     "conReferencia": true
+    }
+   ]
+  },
+  {
+   "z": 52,
+   "fusionK": [
+    {
+     "v": 723.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1263.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6240,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1783,
+   "descubridores": "Franz-Joseph Müller von Reichenstein"
+  },
+  {
+   "z": 53,
+   "fusionK": [
+    {
+     "v": 386.85,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 457.55,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 4841.14,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1811,
+   "descubridores": "Bernard Courtois"
+  },
+  {
+   "z": 54,
+   "fusionK": [
+    {
+     "v": 161.4,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 165.2,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 3408,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1898,
+   "descubridores": "Morris Travers · William Ramsay"
+  },
+  {
+   "z": 55,
+   "fusionK": [
+    {
+     "v": 301.66,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 941.4,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 1900,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1860,
+   "descubridores": "Robert Bunsen · Gustav Kirchhoff"
+  },
+  {
+   "z": 56,
+   "fusionK": [
+    {
+     "v": 1000.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2170.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 3338,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1808,
+   "descubridores": "Humphry Davy"
+  },
+  {
+   "z": 57,
+   "fusionK": [
+    {
+     "v": 1192,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3743,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6139.07,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1839,
+   "descubridores": "Carl Gustaf Mosander"
+  },
+  {
+   "z": 58,
+   "fusionK": [
+    {
+     "v": 1070,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3743,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 9123.65,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1804,
+   "descubridores": "Jöns Jacob Berzelius · Martin Heinrich Klaproth"
+  },
+  {
+   "z": 59,
+   "fusionK": [
+    {
+     "v": 1208,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3403,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6773,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 1841,
+   "descubridores": "Carl Gustaf Mosander"
+  },
+  {
+   "z": 60,
+   "fusionK": [
+    {
+     "v": 1298,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3303,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6754.4,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1885,
+   "descubridores": "Carl Auer von Welsbach"
+  },
+  {
+   "z": 61,
+   "fusionK": [
+    {
+     "v": 1353,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3273,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7200,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1945,
+   "descubridores": "Charles D. Coryell · Jacob A. Marinsky · Lawrence E. Glendenin"
+  },
+  {
+   "z": 62,
+   "fusionK": [
+    {
+     "v": 1346,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2173,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7386.52,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1879,
+   "descubridores": "Paul Emile Lecoq de Boisbaudran"
+  },
+  {
+   "z": 63,
+   "fusionK": [
+    {
+     "v": 1095,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1713,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 5726.84,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1901,
+   "descubridores": "Eugène Demarçay"
+  },
+  {
+   "z": 64,
+   "fusionK": [
+    {
+     "v": 1591,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3273,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 7703.66,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1880,
+   "descubridores": "Jean Charles Galissard de Marignac"
+  },
+  {
+   "z": 65,
+   "fusionK": [
+    {
+     "v": 1624,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3396,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8067.24,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1843,
+   "descubridores": "Carl Gustaf Mosander"
+  },
+  {
+   "z": 66,
+   "fusionK": [
+    {
+     "v": 1683,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2873,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8431.29,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1886,
+   "descubridores": "Paul Emile Lecoq de Boisbaudran"
+  },
+  {
+   "z": 67,
+   "fusionK": [
+    {
+     "v": 1734,
+     "conReferencia": false
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2873,
+     "conReferencia": false
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 8731.91,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1878,
+   "descubridores": "Per Teodor Cleve · Jacques-Louis Soret · Marc Delafontaine"
+  },
+  {
+   "z": 68,
+   "fusionK": [
+    {
+     "v": 1795,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3173,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 9045,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1843,
+   "descubridores": "Carl Gustaf Mosander"
+  },
+  {
+   "z": 69,
+   "fusionK": [
+    {
+     "v": 1822,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2223,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 9289.11,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1879,
+   "descubridores": "Per Teodor Cleve"
+  },
+  {
+   "z": 70,
+   "fusionK": [
+    {
+     "v": 1091,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1703,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 6973,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1878,
+   "descubridores": "Jean Charles Galissard de Marignac"
+  },
+  {
+   "z": 71,
+   "fusionK": [
+    {
+     "v": 1950,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3603,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 9786.15,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1906,
+   "descubridores": "Carl Auer von Welsbach · Georges Urbain"
+  },
+  {
+   "z": 72,
+   "fusionK": [
+    {
+     "v": 2500.37,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4875.37,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 13000,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1922,
+   "descubridores": "George Hevesy · Dirk Coster"
+  },
+  {
+   "z": 73,
+   "fusionK": [
+    {
+     "v": 3269.26,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 5698.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 16650,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1802,
+   "descubridores": "Anders Gustaf Ekeberg"
+  },
+  {
+   "z": 74,
+   "fusionK": [
+    {
+     "v": 3683.15,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 6200.37,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 19300,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1783,
+   "descubridores": "Fausto Delhuyar · Juan José Delhuyar"
+  },
+  {
+   "z": 75,
+   "fusionK": [
+    {
+     "v": 3459,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 5903,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 21000,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1925,
+   "descubridores": "Walter Noddack · Ida Noderikash · Otto Berg"
+  },
+  {
+   "z": 76,
+   "fusionK": [
+    {
+     "v": 3400,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 5273,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 22359.7,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1804,
+   "descubridores": "William Hyde Wollaston · Smithson Tennant"
+  },
+  {
+   "z": 77,
+   "fusionK": [
+    {
+     "v": 2739,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4403,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 22304.4,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1803,
+   "descubridores": "Smithson Tennant"
+  },
+  {
+   "z": 78,
+   "fusionK": [
+    {
+     "v": 2041.4,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4100,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 21134.9,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1557,
+   "descubridores": "Giulio Cesare Scaligero · Antonio de Ulloa"
+  },
+  {
+   "z": 79,
+   "fusionK": [
+    {
+     "v": 1337.33,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3243.15,
+     "conReferencia": false
+    },
+    {
+     "v": 3213.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 19320,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": -6000
+  },
+  {
+   "z": 80,
+   "fusionK": [
+    {
+     "v": 234.322,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 629.878,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 13600,
+     "conReferencia": true
+    }
+   ]
+  },
+  {
+   "z": 81,
+   "fusionK": [
+    {
+     "v": 577,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1733,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 11348.4,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1861,
+   "descubridores": "William Crookes"
+  },
+  {
+   "z": 82,
+   "fusionK": [
+    {
+     "v": 601.15,
+     "conReferencia": false
+    },
+    {
+     "v": 600.372,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2013.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 11340,
+     "conReferencia": true
+    }
+   ]
+  },
+  {
+   "z": 83,
+   "fusionK": [
+    {
+     "v": 544.4,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1833,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 9485.06,
+     "conReferencia": true
+    }
+   ]
+  },
+  {
+   "z": 84,
+   "fusionK": [
+    {
+     "v": 527,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1235,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 9196,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1898
+  },
+  {
+   "z": 85,
+   "fusionK": [
+    {
+     "v": 575,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 503,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1940,
+   "descubridores": "Emilio Gino Segrè"
+  },
+  {
+   "z": 86,
+   "fusionK": [
+    {
+     "v": 202,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 211.3,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1899,
+   "descubridores": "Ernest Rutherford · Friedrich Ernst Dorn · Robert Bowie Owens"
+  },
+  {
+   "z": 87,
+   "fusionK": [
+    {
+     "v": 300,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1939,
+   "descubridores": "Marguerite Perey"
+  },
+  {
+   "z": 88,
+   "fusionK": [
+    {
+     "v": 973,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2010,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 5500,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1898
+  },
+  {
+   "z": 89,
+   "fusionK": [
+    {
+     "v": 1500,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3573,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 10070,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1899,
+   "descubridores": "André-Louis Debierne"
+  },
+  {
+   "z": 90,
+   "fusionK": [
+    {
+     "v": 2020,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 5061,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 11986.8,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1828,
+   "descubridores": "Jöns Jacob Berzelius"
+  },
+  {
+   "z": 91,
+   "fusionK": [
+    {
+     "v": 1843,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4300,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 15684.3,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1917,
+   "descubridores": "Otto Hahn · Lise Meitner · Kasimir Fajans"
+  },
+  {
+   "z": 92,
+   "fusionK": [
+    {
+     "v": 1407,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4203,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 19050,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1789,
+   "descubridores": "Eugène-Melchior Péligot"
+  },
+  {
+   "z": 93,
+   "fusionK": [
+    {
+     "v": 913,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 4175,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 21731.7,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1940,
+   "descubridores": "Edwin Mattison McMillan · Philip Hauge Abelson"
+  },
+  {
+   "z": 94,
+   "fusionK": [
+    {
+     "v": 913,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3509,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 18532.1,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1941,
+   "descubridores": "Edwin Mattison McMillan · Glenn T. Seaborg · Arthur Wahl · Joseph W. Kennedy"
+  },
+  {
+   "z": 95,
+   "fusionK": [
+    {
+     "v": 1449,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 2880,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 13670,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1944,
+   "descubridores": "Glenn T. Seaborg"
+  },
+  {
+   "z": 96,
+   "fusionK": [
+    {
+     "v": 1619,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 3383,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 13510,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1944,
+   "descubridores": "Glenn T. Seaborg"
+  },
+  {
+   "z": 97,
+   "fusionK": [
+    {
+     "v": 1323,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 14780,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1949,
+   "descubridores": "Glenn T. Seaborg · Albert Ghiorso · Stanley Gerald Thompson"
+  },
+  {
+   "z": 98,
+   "fusionK": [
+    {
+     "v": 1173,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1743,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 15100,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1950,
+   "descubridores": "Glenn T. Seaborg · Albert Ghiorso · Kenneth Street Jr. · Stanley Gerald Thompson"
+  },
+  {
+   "z": 99,
+   "fusionK": [
+    {
+     "v": 1133,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1269,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1952,
+   "descubridores": "Glenn T. Seaborg · Albert Ghiorso"
+  },
+  {
+   "z": 100,
+   "fusionK": [
+    {
+     "v": 1125,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1952,
+   "descubridores": "Glenn T. Seaborg"
+  },
+  {
+   "z": 101,
+   "fusionK": [
+    {
+     "v": 1100,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1955,
+   "descubridores": "Glenn T. Seaborg"
+  },
+  {
+   "z": 102,
+   "fusionK": [
+    {
+     "v": 1100,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1958,
+   "descubridores": "Glenn T. Seaborg"
+  },
+  {
+   "z": 103,
+   "fusionK": [
+    {
+     "v": 1900,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1961,
+   "descubridores": "Albert Ghiorso"
+  },
+  {
+   "z": 104,
+   "fusionK": [
+    {
+     "v": 2400,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 5800,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 1964,
+   "descubridores": "Albert Ghiorso"
+  },
+  {
+   "z": 105,
+   "anioDescubrimiento": 1970,
+   "descubridores": "Lawrence Berkeley National Laboratory · Instituto Central de Investigaciones Nucleares"
+  },
+  {
+   "z": 106,
+   "anioDescubrimiento": 1974,
+   "descubridores": "Yuri Tsolakovich Oganessian"
+  },
+  {
+   "z": 107,
+   "anioDescubrimiento": 1976,
+   "descubridores": "Yuri Tsolakovich Oganessian"
+  },
+  {
+   "z": 108,
+   "anioDescubrimiento": 1984,
+   "descubridores": "GSI"
+  },
+  {
+   "z": 109,
+   "anioDescubrimiento": 1982,
+   "descubridores": "GSI"
+  },
+  {
+   "z": 110,
+   "anioDescubrimiento": 1994,
+   "descubridores": "GSI"
+  },
+  {
+   "z": 111,
+   "anioDescubrimiento": 1994,
+   "descubridores": "GSI"
+  },
+  {
+   "z": 112,
+   "anioDescubrimiento": 1996,
+   "descubridores": "GSI"
+  },
+  {
+   "z": 113,
+   "fusionK": [
+    {
+     "v": 700,
+     "conReferencia": true
+    }
+   ],
+   "ebullicionK": [
+    {
+     "v": 1403.15,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 2006,
+   "descubridores": "Instituto Central de Investigaciones Nucleares"
+  },
+  {
+   "z": 114,
+   "anioDescubrimiento": 1999,
+   "descubridores": "Instituto Central de Investigaciones Nucleares"
+  },
+  {
+   "z": 115,
+   "fusionK": [
+    {
+     "v": 670,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 2003,
+   "descubridores": "Instituto Central de Investigaciones Nucleares"
+  },
+  {
+   "z": 116,
+   "anioDescubrimiento": 2000,
+   "descubridores": "Instituto Central de Investigaciones Nucleares"
+  },
+  {
+   "z": 117,
+   "ebullicionK": [
+    {
+     "v": 883,
+     "conReferencia": true
+    }
+   ],
+   "anioDescubrimiento": 2009,
+   "descubridores": "Yuri Tsolakovich Oganessian"
+  },
+  {
+   "z": 118,
+   "ebullicionK": [
+    {
+     "v": 353.15,
+     "conReferencia": true
+    }
+   ],
+   "densidadKgM3": [
+    {
+     "v": 4900,
+     "conReferencia": false
+    }
+   ],
+   "anioDescubrimiento": 2002,
+   "descubridores": "Instituto Central de Investigaciones Nucleares"
+  }
+ ]
+}

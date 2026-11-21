@@ -1,0 +1,80 @@
+.quimica-experimentos {
+  background: var(--bg-2);
+  color: var(--text);
+}
+
+.sim-subs .lab-modo {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.sim-subs .lab-modo small {
+  color: var(--text-2);
+}
+
+.sim-subs .lab-modo:hover:not(:disabled) {
+  background: var(--surface-3);
+  border-color: var(--accent);
+}
+
+.sim-subs .lab-modo[aria-selected='true'],
+.sim-subs .lab-modo[aria-selected='true']:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+.sim-subs .lab-modo[aria-selected='true'] small {
+  color: inherit;
+}
+
+.sim-inicio {
+  display: grid;
+  gap: var(--s-1);
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--border);
+  border-inline-start: 3px solid var(--disciplina, var(--accent));
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.sim-inicio h3 {
+  font-size: var(--t-cuerpo);
+}
+
+.sim-fq .sim-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
+.sim-fq .ui-tarjeta {
+  min-width: 0;
+  color: var(--text);
+}
+
+.sim-fq .sim-campo .input {
+  min-width: 0;
+  background: var(--surface-2);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.sim-fq .sim-campo .input:focus {
+  border-color: var(--accent);
+}
+
+.sim-fq .grafica-xy svg,
+.sim-fq .sim-barras {
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+}
+
+.sim-fq .gxy-tick,
+.sim-fq .gxy-titulo {
+  fill: var(--text);
+}
+
+.sim-fq .gxy-marco {
+  stroke: var(--text-3);
+}

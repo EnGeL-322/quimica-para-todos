@@ -1,0 +1,214 @@
+.pt-sustancias {
+  container-type: inline-size;
+  min-width: 0;
+  --pt-fondo-ilustracion: white;
+}
+
+.pt-sustancias-controles {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: var(--s-3);
+}
+
+.pt-sustancias-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr);
+  gap: var(--s-4);
+  align-items: start;
+}
+
+.pt-sustancias-layout > *,
+.pt-sustancia-ficha,
+.pt-sustancia-seccion {
+  min-width: 0;
+}
+
+.pt-resultados-lista {
+  display: grid;
+  gap: var(--s-2);
+  max-height: clamp(232px, 56vh, 540px);
+  overflow-y: auto;
+  margin: 0;
+  padding: var(--s-1);
+  list-style: none;
+  scrollbar-gutter: stable;
+}
+
+.pt-sustancia-resultado {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--s-1) var(--s-2);
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  width: 100%;
+  cursor: pointer;
+  text-align: start;
+}
+
+.pt-sustancia-resultado > strong {
+  overflow-wrap: anywhere;
+}
+
+.pt-sustancia-resultado > .mono {
+  max-width: 12ch;
+  overflow-wrap: anywhere;
+  text-align: end;
+}
+
+.pt-sustancia-resultado > .faint,
+.pt-sustancia-resultado > .badge {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.pt-sustancia-resultado:hover,
+.pt-sustancia-resultado[aria-current] {
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+
+.pt-sustancia-vacia {
+  border-style: dashed;
+  background: var(--surface-2);
+}
+
+.pt-sustancia-titulo {
+  justify-content: space-between;
+}
+
+.pt-sustancia-titulo h3 {
+  font-size: var(--t-titulo);
+  overflow-wrap: anywhere;
+}
+
+.pt-sustancia-seccion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--s-2) var(--s-3);
+}
+
+.pt-sustancia-seccion > summary {
+  padding: var(--s-1) 0;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.pt-sustancia-seccion[open] > summary {
+  margin-bottom: var(--s-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.pt-sello-peligro {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.pt-peligros-registro + .pt-peligros-registro,
+.pt-fuente + .pt-fuente {
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--border);
+}
+
+.pt-peligro-subtitulo {
+  margin: 0 0 var(--s-1);
+  font-size: var(--t-cuerpo);
+}
+
+.pt-indicaciones {
+  margin: 0;
+  padding-inline-start: var(--s-5);
+}
+
+.pt-indicaciones li + li {
+  margin-top: var(--s-1);
+}
+
+.pt-pictogramas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin: var(--s-1) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pt-pictogramas > li {
+  display: grid;
+  justify-items: center;
+  gap: var(--s-1);
+  width: 104px;
+  padding: var(--s-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: var(--t-etiqueta);
+  text-align: center;
+}
+
+.pt-pictogramas img {
+  display: block;
+  object-fit: contain;
+  background: var(--pt-fondo-ilustracion);
+}
+
+.pt-ficha-kv {
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  gap: var(--s-1) var(--s-3);
+  margin: 0;
+  font-size: var(--t-etiqueta);
+}
+
+.pt-ficha-kv dd,
+.pt-url {
+  overflow-wrap: anywhere;
+}
+
+.pt-enlace-fuente {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-1) var(--s-2);
+}
+
+.pt-url {
+  min-width: 0;
+  color: var(--accent);
+  user-select: text;
+}
+
+.pt-estructura {
+  display: grid;
+  justify-items: start;
+  gap: var(--s-1);
+  margin: var(--s-3) 0 0;
+}
+
+.pt-estructura img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--pt-fondo-ilustracion);
+}
+
+@container (max-width: 620px) {
+  .pt-sustancias-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pt-resultados-lista {
+    max-height: 245px;
+  }
+}
+
+@container (max-width: 440px) {
+  .pt-sustancias-controles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

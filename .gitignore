@@ -1,0 +1,13 @@
+node_modules/
+out/
+dist/
+*.log
+.env
+.env.*
+*.pem
+*.key
+# modelos y binarios de terceros: los instala el usuario
+*.gguf
+ggml-*.bin
+resources/bin/
+.DS_Store

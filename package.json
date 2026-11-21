@@ -1,0 +1,84 @@
+{
+  "name": "quimica-para-todos",
+  "productName": "Química para Todos",
+  "version": "0.1.0",
+  "description": "Mesa molecular, visor 2D y 3D, formulación, reacciones, experimentos, ejercicios y tabla periódica, 100 % sin conexión.",
+  "author": "ramiroengelbert",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "test": "vitest run",
+    "test:exhaustivo": "vitest run --config vitest.exhaustivo.config.mts",
+    "dist": "electron-vite build && electron-builder --win",
+    "new:module": "node scripts/new-module.mjs",
+    "avisos": "node scripts/generar-avisos.mjs",
+    "temario": "node scripts/generar-temario.mjs"
+  },
+  "dependencies": {
+    "openchemlib": "9.25.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "temml": "0.14.0",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "electron": "^45.2.1",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.1.0"
+  },
+  "build": {
+    "appId": "pe.ramiroengelbert.quimicaparatodos",
+    "productName": "Química para Todos",
+    "copyright": "© 2026 ramiroengelbert",
+    "executableName": "QuimicaParaTodos",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**",
+      "package.json",
+      "!node_modules/**"
+    ],
+    "extraFiles": [
+      {
+        "from": "licencias",
+        "to": "licencias"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico",
+      "legalTrademarks": "ramiroengelbert"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "artifactName": "QuimicaParaTodos-Setup-${version}.${ext}",
+      "shortcutName": "Química para Todos",
+      "uninstallDisplayName": "Química para Todos",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,15 @@
+.peligro-peligro { --pt-fondo: #ffdce0; --pt-tinta: #751c2b; --pt-borde: #c55a69; }
+.peligro-atencion { --pt-fondo: #ffe6b8; --pt-tinta: #613708; --pt-borde: #b47a2c; }
+.peligro-documentado { --pt-fondo: #d7eaff; --pt-tinta: #183d69; --pt-borde: #668cb7; }
+.peligro-no-clasificado { --pt-fondo: #eef0f4; --pt-tinta: #373f4a; --pt-borde: #8a93a1; }
+.peligro-insuficiente {
+  --pt-fondo: repeating-linear-gradient(135deg, #edf0f4 0 5px, #dfe4eb 5px 8px);
+  --pt-tinta: #374254;
+  --pt-borde: #8894a6;
+}
+
+:is(.pt-cell, .pt-sello, .peligro-sello, .sello-peligro)[class*='peligro-'] {
+  background: var(--pt-fondo);
+  color: var(--pt-tinta);
+  border-color: var(--pt-borde);
+}

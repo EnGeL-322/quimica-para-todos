@@ -1,0 +1,167 @@
+Química para Todos — créditos de datos, imágenes y referencias
+===============================================================
+
+Trabajo propio
+--------------
+Código, textos, interfaz, ejercicios, simulaciones, casos redactados, iconos y marca visual
+(símbolo del anillo hexagonal): © 2026 ramiroengelbert.
+Tipografías: la aplicación usa las fuentes del sistema operativo (Segoe UI, Cascadia Code o
+Consolas). No se distribuye ningún archivo de fuente.
+
+Pictogramas del SGA (GHS01 a GHS09)
+-----------------------------------
+Imágenes de la Administración de Seguridad y Salud Ocupacional de EE. UU. (OSHA),
+https://www.osha.gov/hazcom/pictograms. La página atribuye cada imagen así: «Photo Credit:
+OSHA | Copyright: Public Domain» (consultada el 2026-11-12). Son pictogramas normalizados de
+peligro, no logotipos. Se incluyen sin modificar.
+
+Tabla periódica
+---------------
+- Fusión, ebullición, densidad, año y descubridores: Wikidata (licencia CC0,
+  https://www.wikidata.org/wiki/Wikidata:Licensing). Cada valor indica si la declaración cita
+  una referencia.
+- Electronegatividad de Pauling y estados de oxidación: datos de elementos de PubChem
+  (https://pubchem.ncbi.nlm.nih.gov/docs/elements). NCBI declara que no impone restricciones
+  al uso ni a la distribución de los datos de sus bases; los depositantes pueden reclamar
+  derechos sobre datos concretos.
+- Radios covalentes: Cordero et al., «Covalent radii revisited», Dalton Trans. 2008 (dato
+  citado).
+- Masas atómicas de la tabla: fuente no registrada; la app las marca como «sin verificar».
+
+Catálogo de peligros
+--------------------
+Clasificaciones resumidas en español a partir de las Fichas Internacionales de Seguridad
+Química (ICSC, OIT y OMS), del inventario de clasificación y etiquetado de ECHA y de la
+sección 2 de fichas de datos de seguridad de proveedores concretos (por ejemplo, Fisher
+Scientific). Cada registro guarda la fuente, la revisión, la fecha y el alcance. Las
+palabras de advertencia y los códigos H son datos de la fuente; los resúmenes son propios.
+
+Casos reales y experimentos
+---------------------------
+Cada afirmación muestra en la app su fuente y la fecha de consulta: PubChem (NCBI/NLM), USGS,
+NASA, Cologne Database for Molecular Spectroscopy, patentes de EE. UU. 381 968 y 568 177
+(Google Patents), Tesla Science Center at Wardenclyffe, Fiorillo et al. 2020 (PMC),
+Wikipedia y otras. Los textos de la app son propios; solo se reproducen datos y citas
+breves con su origen. Las entalpías de formación y los pKa marcados como secundarios
+proceden de tablas de Wikipedia; R = 8,314462618 J/(mol·K) es exacta (CODATA).
+
+Miniaturas de los temas de ejercicios
+-------------------------------------
+Las 27 miniaturas SVG (22 temas y 5 ramas) son trabajo propio de ramiroengelbert, generadas con
+scripts/generar-miniaturas.mjs. Las estructuras químicas se dibujan con openchemlib (licencia
+BSD-3-Clause, ver AVISOS-TERCEROS.txt) y cada fórmula molecular se verifica al generarlas. Los
+gráficos usan funciones simples y datos didácticos: no son mediciones ni datos de terceros. No
+contienen fotografías, logotipos ni recursos de otras personas.
+
+Lecciones de Aprender química
+-----------------------------
+Los textos, ejemplos, datos y comprobaciones de las 22 lecciones son trabajo propio de
+ramiroengelbert. Para ubicar cada tema se consultó, el 2026-11-15, el índice de capítulos y
+secciones de OpenStax, Chemistry 2e (Flowers, Theopold, Langley y Robinson, OpenStax, 2019;
+licencia CC BY-NC-SA 4.0). No se copia texto, figuras ni problemas de esa obra: solo se cita el
+título de la sección como referencia. Las masas atómicas abreviadas se compararon con CIAAW,
+Standard Atomic Weights 2024 (ciaaw.org). Las definiciones de «CIP priority» y «R, S» del IUPAC
+Gold Book (C01082, R05423) se leyeron en resultados del buscador de la propia web.
+Los datos numéricos de los ejemplos (Ka, Kc, ΔH, ΔS, absorbancias y concentraciones) son
+didácticos, no mediciones publicadas, y la interfaz lo dice.
+
+Constantes del producto de solubilidad (Ksp) y recomendación de absorbancia
+---------------------------------------------------------------------------
+Los tres Ksp de la escena «Solubilidad» (CaF2, Mg(OH)2 y CaCO3 calcita) se transcriben de
+D. Harvey, Analytical Chemistry 2.1, «16.10: Solubility Products» (Chemistry LibreTexts,
+https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_by_David_Harvey/Analytical_Chemistry_2.1_(Harvey)/16%3A_Appendix/16.10%3A_Solubility_Products),
+consultada el 2026-11-15 con una herramienta de lectura de páginas que devolvió las filas
+literales (no se leyó la página entera). La página atribuye los valores a A. E. Martell y
+R. M. Smith, Critical Stability Constants, vol. 4, Plenum Press, 1976, y declara «25 °C y fuerza
+iónica cero»; la licencia que declara la página es CC BY-NC-SA 4.0. Solo se transcriben tres
+constantes (datos) con su atribución. CONDICIÓN PENDIENTE: la cláusula NC (uso no comercial)
+y SA (compartir igual) afectan a una eventual distribución comercial de la aplicación; hay que
+revisarla antes de distribuirla con ese fin o sustituir estos tres datos por otros.
+Para contrastar (no se usa ningún valor en los cálculos) se abrieron también LibreTexts «E3:
+Solubility Constants for Compounds at 25°C» (CC BY-NC-SA 4.0; datos del CRC Handbook, 84.ª ed.,
+2004) y Lumen/OpenStax «10.10: Solubility Products» (CC BY 4.0). Cada sal, su fila literal, el
+alcance de la lectura y los valores discrepantes están en
+src/renderer/modules/simulador-quimica/datos/solubilidad.ts y en docs/ENTREGA-D-LABORATORIO.md.
+La recomendación de medir la absorbancia entre 0,1 y 0,8 y de evitar registrarla por encima de 1
+(escena «Colorimetría») procede de Wenzel, Chemistry LibreTexts, «1.2: Beers Law»
+(https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Molecular_and_Atomic_Spectroscopy_(Wenzel)/1%3A_General_Background_on_Molecular_Spectroscopy/1.2%3A_Beers_Law),
+consultada el 2026-11-15 con la misma herramienta (citas, no texto íntegro); no se copia texto,
+solo se cita la recomendación con su alcance. Los datos de ejemplo de colorimetría y solubilidad
+(absorbancias, concentraciones) son didácticos y la interfaz lo dice.
+
+Potenciales estándar de reducción (escena «Electroquímica») y constantes CODATA
+--------------------------------------------------------------------------------
+Los seis potenciales (Zn²⁺/Zn −0,7618 V, Cu²⁺/Cu 0,337 V, Fe²⁺/Fe −0,44 V, Mg²⁺/Mg −2,372 V,
+Al³⁺/Al −1,662 V y H⁺/H₂ 0 V) se transcriben de Wikipedia, «Standard electrode potential (data
+page)» (https://en.wikipedia.org/wiki/Standard_electrode_potential_(data_page)), consultada el
+2026-11-15 con una herramienta de lectura de páginas que devolvió las filas literales (no se leyó
+la página entera). La página declara 298,15 K, referencia SHE, actividad 1 mol/dm³ y gases a
+101,325 kPa, y cita una referencia por fila (CRC Handbook, Bard, Parsons y Jordan 1985, Atkins
+1997; la fila del H₂ no cita ninguna). Licencia que declara: CC BY-SA 4.0 («additional terms may
+apply»): atribución y compartir igual; el uso comercial lo permite la licencia, pero la propia
+página avisa de que pueden aplicarse términos adicionales a contenido de terceros. REVISAR si la
+aplicación se distribuye. Solo se transcriben seis valores (datos) con su atribución.
+Para contrastar (no se usa ningún valor en los cálculos) se abrió Harvey, Analytical Chemistry
+2.1, «16.13: Standard Reduction Potentials» (Chemistry LibreTexts; CC BY-NC-SA 4.0), que no
+declara temperatura ni convenio. También se abrió LibreTexts, «12.4: Standard Reduction
+Potentials» (Universidad de Toronto), que declara 25 °C pero ni convenio, ni fuente, ni licencia
+(«not declared»): se descartó y no se usa ningún valor. Mismo condicionante NC-SA que los Ksp si
+se mostraran los valores de Harvey: aquí se muestran como valores «no usados» en el diagnóstico
+de discrepancia entre tablas.
+La constante de Faraday (96 485.332 12… C/mol) y la molar de los gases (8.314 462 618… J/(mol·K))
+proceden de NIST, «Fundamental Physical Constants — Complete Listing», ajuste CODATA 2018
+(https://physics.nist.gov/cuu/Constants/ArchiveASCII/allascii_2018.txt, la edición que ya usa el
+proyecto) y se contrastaron con el ajuste CODATA 2022
+(https://physics.nist.gov/cuu/Constants/Table/allascii.txt): ambas filas están marcadas «(exact)»
+y son idénticas. El listado no declara condiciones de reutilización y trunca los dígitos con
+puntos suspensivos: se usan los dígitos mostrados. Cada par, su fila literal, la referencia de la
+fila, el alcance de la lectura y los valores discrepantes están en
+src/renderer/modules/simulador-quimica/datos/electroquimica.ts y en docs/ENTREGA-D-LABORATORIO.md.
+
+Geometrías y estructuras
+------------------------
+Las estructuras 2D y 3D se calculan con openchemlib (ver AVISOS-TERCEROS.txt), que incluye
+el campo de fuerza MMFF94 y datos de longitudes de enlace de la Crystallography Open
+Database.
+
+Comparación de isómeros (escena «Isómeros»)
+-------------------------------------------
+Esta escena no incorpora ningún dato numérico de terceros: las geometrías de los 4 pares de
+isómeros (but-2-eno Z/E, etanol y éter dimetílico, butano y 2-metilpropano, propan-1-ol y
+propan-2-ol) se calculan al abrir la escena con openchemlib 9.25.2 (conformación inicial de
+semilla fija 42 minimizada con MMFF94s) y las distancias, ángulos y diedros se calculan a
+partir de esas coordenadas. Los pares salen de los bancos propios de la app
+(practica/bancos.ts). Ninguna geometría de estos pares es experimental: la app solo trae
+geometría experimental de 10 moléculas pequeñas y ninguna es isómera de otra.
+Licencias consultadas el 2026-11-15 con una herramienta de lectura de páginas (se leyó el
+bloque de licencia completo, no el repositorio):
+- openchemlib: https://github.com/Actelion/openchemlib/blob/master/LICENSE — «Copyright (c)
+  1997 - 2016 Actelion Pharmaceuticals Ltd.»; redistribución permitida con tres condiciones
+  (conservar el aviso de copyright en el código fuente, reproducirlo en la documentación de las
+  distribuciones binarias y no usar el nombre del titular para promocionar productos derivados).
+  La página no pone título a la licencia; el paquete instalado la declara como BSD-3-Clause
+  (AVISOS-TERCEROS.txt, que ya reproduce el aviso).
+- Crystallography Open Database (datos de longitudes de enlace dentro de openchemlib):
+  https://www.crystallography.net/cod/ — «All data in the COD and the database itself are
+  dedicated to the public domain and licensed under the CC0 License.» y «Users of the data
+  should acknowledge the original authors of the structural data.» (atribución que se cumple
+  nombrando aquí la COD).
+- NO verificado: la licencia de los parámetros del campo de fuerzas MMFF94 que openchemlib
+  incorpora. No se abrió ninguna fuente que la declare; el aviso de openchemlib solo cubre su
+  propio código. Está en licencias/PENDIENTES-ANTES-DE-DISTRIBUIR.md.
+
+Mesa libre (D4.5)
+-----------------
+La Mesa libre no añade recursos, imágenes ni datos nuevos: reutiliza, sin copiarlos, el catálogo
+de peligros de la Tabla periódica (ICSC de la OIT y la OMS y fichas de proveedores, ya
+acreditados arriba), los Ksp de la escena Solubilidad (Harvey, «16.10: Solubility Products»,
+CC BY-NC-SA 4.0, y las tablas de contraste ya anotadas), las disoluciones de ejemplo de la
+escena Dilución (valores didácticos propios) y las masas atómicas de la tabla de la app (fuente
+no registrada, «sin verificar»). Muestra en pantalla la fuente, fecha, alcance de la lectura y
+licencia de cada Ksp que usa. La tarjeta de la mesa reutiliza la miniatura «dilucion» (trabajo
+propio de ramiroengelbert, ver arriba); no se creó ninguna miniatura nueva.
+
+Sin recursos de marca ajenos
+----------------------------
+La aplicación no incluye logotipos, sellos ni iconos institucionales de terceros. Los nombres
+de organismos y productos aparecen solo para identificar fuentes.

@@ -1,0 +1,86 @@
+import { rengConvertir } from '../../../../../lib/unidades'
+import { RENG_FARADAY } from '../../../datos/electroquimica'
+import { RENG_C_AGUA, RENG_R, rengCalorLiberado, rengConstanteDeG, rengEnergiaLibre, rengEntalpiaReaccion, rengEntropiaReaccion, rengVanTHoff } from '../../../nucleo/termoquimica'
+import { rengLecturasCalorimetria } from '../../../escenas-n1/modelos/calorimetria'
+import { rengLecturasElectrolisis } from '../../../escenas-n1/modelos/electrolisis'
+import { rengBiseccion } from '../numericos'
+import type { RengEjemploN1 } from '../tipos'
+import { rengMm, rengTx } from '../estequiometria/datos'
+
+const T = { rel: 0.005, abs: 1e-12 }
+const F = RENG_FARADAY.valor
+const ej = (rengE: Omit<RengEjemploN1, 'tolerancia' | 'cifras'> & { cifras?: number }): RengEjemploN1 => ({ cifras: 3, tolerancia: T, ...rengE })
+const M_CH4 = rengMm('CH4')
+const R_CH4 = { reactivos: [{ id: 'CH4', nu: 1 }, { id: 'O2', nu: 2 }], productos: [{ id: 'CO2', nu: 1 }, { id: 'H2O_l', nu: 2 }] }
+const R_H2O = { reactivos: [{ id: 'H2', nu: 2 }, { id: 'O2', nu: 1 }], productos: [{ id: 'H2O_l', nu: 2 }] }
+const R_ETANOL = { reactivos: [{ id: 'C2H5OH', nu: 1 }, { id: 'O2', nu: 3 }], productos: [{ id: 'CO2', nu: 2 }, { id: 'H2O_l', nu: 3 }] }
+const R_NH3 = { reactivos: [{ id: 'N2', nu: 1 }, { id: 'H2', nu: 3 }], productos: [{ id: 'NH3', nu: 2 }] }
+export const RENG_DH_CH4 = rengEntalpiaReaccion(R_CH4)
+export const RENG_DH_NH3 = rengEntalpiaReaccion(R_NH3)
+export const RENG_DS_NH3 = rengEntropiaReaccion(R_NH3)!
+export const RENG_DS_CH4 = rengEntropiaReaccion(R_CH4)!
+
+export const RENG_EJEMPLOS_TERMO: readonly RengEjemploN1[] = [
+  ej({ id: 'ej-te-calor', titulo: 'Calor para calentar agua', enunciado: `Se calientan 250 g de agua de 20,0 °C a 80,0 °C. c(agua) = ${String(RENG_C_AGUA).replace('.', ',')} J/(g·K).`, pregunta: '¿Cuánto calor se necesita, en kJ?', datos: [['Agua', '250 g'], ['ΔT', '20,0 → 80,0 °C']], unidad: 'kJ',
+    analitico: () => (250 * RENG_C_AGUA * 60) / 1000, segundo: () => rengConvertir(250 * RENG_C_AGUA * (rengConvertir(80, '°C', 'K') - rengConvertir(20, '°C', 'K')), 'J', 'kJ'), metodoSegundo: 'temperaturas pasadas a kelvin y julios a kilojulios con el catálogo',
+    pasos: (rengR) => ['q = m·c·ΔT, con ΔT = 60,0 K (un cambio de 1 °C es un cambio de 1 K).', `q = 250 × 4,184 × 60,0 = ${rengTx(rengR * 1000)} J = ${rengTx(rengR)} kJ.`], pistas: ['Usa q = m·c·ΔT.', 'ΔT en °C y en K es igual.', 'Pasa los julios a kJ.'] }),
+  ej({ id: 'ej-te-capacidad', titulo: 'Capacidad calorífica de un objeto', enunciado: 'Un objeto recibe 5,00 kJ y su temperatura sube 12,5 K.', pregunta: '¿Cuál es su capacidad calorífica, en J/K?', datos: [['q', '5,00 kJ'], ['ΔT', '12,5 K']], unidad: 'J/K',
+    analitico: () => 5000 / 12.5, segundo: () => rengBiseccion((rengC) => rengC * 12.5 - rengConvertir(5, 'kJ', 'J'), 0, 1e5), metodoSegundo: 'búsqueda por bisección de C en q = C·ΔT con kJ pasados a J',
+    pasos: (rengR) => ['C = q / ΔT.', `C = 5000 J / 12,5 K = ${rengTx(rengR)} J/K.`], pistas: ['C relaciona calor y ΔT.', 'Pasa kJ a J.', 'Divide entre ΔT.'] }),
+  ej({ id: 'ej-te-especifico', titulo: 'Calor específico de un metal', enunciado: 'Una pieza de 150 g de un metal absorbe 1,35 kJ y su temperatura sube 20,0 K.', pregunta: '¿Cuál es su calor específico, en J/(g·K)?', datos: [['m', '150 g'], ['q', '1,35 kJ'], ['ΔT', '20,0 K']], unidad: 'J/(g·K)',
+    analitico: () => 1350 / (150 * 20), segundo: () => rengBiseccion((rengC) => 150 * rengC * 20 - 1350, 0, 100), metodoSegundo: 'búsqueda por bisección de c en q = m·c·ΔT',
+    pasos: (rengR) => ['c = q / (m·ΔT).', `c = 1350 / (150 × 20,0) = ${rengTx(rengR)} J/(g·K).`], pistas: ['Despeja c de q = m·c·ΔT.', 'Usa julios.', 'Divide entre masa y ΔT.'] }),
+  ej({ id: 'ej-te-calorimetria', titulo: 'Entalpía de neutralización', enunciado: 'Se mezclan 50,0 mL de HCl 1,00 mol/L y 50,0 mL de NaOH 1,00 mol/L en un calorímetro; la temperatura sube 6,70 K. Se toma la disolución como 100 g de agua (c = 4,184 J/(g·K)) y se desprecia el calorímetro.', pregunta: '¿Cuál es ΔH de neutralización, en kJ/mol?', datos: [['Disolución', '100 g, c = 4,184 J/(g·K)'], ['ΔT', '6,70 K'], ['n(H₂O formada)', '0,0500 mol']], unidad: 'kJ/mol',
+    analitico: () => -(100 * RENG_C_AGUA * 6.7) / 1000 / 0.05, segundo: () => -rengConvertir(100 * RENG_C_AGUA * 6.7, 'J', 'kJ') / (rengConvertir(50, 'mL', 'L') * 1), metodoSegundo: 'calor en kJ y moles con litros del catálogo',
+    pasos: (rengR) => [`q(disolución) = 100 × 4,184 × 6,70 = ${rengTx(100 * RENG_C_AGUA * 6.7)} J; la reacción cede ese calor.`, `ΔH = −q / n = ${rengTx(rengR)} kJ/mol.`], pistas: ['Calcula el calor que recibe la disolución.', 'La reacción libera ese calor: signo menos.', 'Divide entre los moles de agua formada.'] }),
+  ej({ id: 'ej-te-entalpia', titulo: 'Calor de combustión del metano', enunciado: `La combustión CH₄ + 2 O₂ → CO₂ + 2 H₂O(l) tiene ΔH = ${rengTx(RENG_DH_CH4, 4)} kJ/mol (calculada con la tabla de la app). Se queman 10,0 g de CH₄ (${rengTx(M_CH4, 4)} g/mol).`, pregunta: '¿Cuánto calor se libera, en kJ?', datos: [['ΔH', `${rengTx(RENG_DH_CH4, 4)} kJ/mol`], ['CH₄', '10,0 g']], unidad: 'kJ',
+    analitico: () => (10 / M_CH4) * -RENG_DH_CH4, segundo: () => rengCalorLiberado(RENG_DH_CH4, 1, 10 / M_CH4), metodoSegundo: 'función del núcleo para el calor liberado',
+    pasos: (rengR) => [`n(CH₄) = 10,0 / ${rengTx(M_CH4, 4)} = ${rengTx(10 / M_CH4, 4)} mol.`, `q = n × |ΔH| = ${rengTx(rengR)} kJ liberados.`], pistas: ['Pasa la masa a moles.', 'ΔH es por mol de CH₄.', 'Multiplica y cambia el signo.'] }),
+  ej({ id: 'ej-te-reaccion', titulo: 'ΔH de formación del agua', enunciado: 'Con la tabla de la app, ΔHf(H₂O, l) = −285,8 kJ/mol.', pregunta: '¿Cuál es ΔH de 2 H₂(g) + O₂(g) → 2 H₂O(l), en kJ?', datos: [['ΔHf(H₂O, l)', '−285,8 kJ/mol'], ['ΔHf(elementos)', '0']], unidad: 'kJ',
+    analitico: () => 2 * -285.8, segundo: () => rengEntalpiaReaccion(R_H2O), metodoSegundo: 'función del núcleo con las entalpías de formación tabuladas',
+    pasos: (rengR) => ['ΔH = Σ ΔHf(productos) − Σ ΔHf(reactivos); los elementos valen 0.', `ΔH = 2 × (−285,8) = ${rengTx(rengR)} kJ.`], pistas: ['Los elementos tienen ΔHf = 0.', 'Multiplica por los coeficientes.', 'Productos menos reactivos.'] }),
+  ej({ id: 'ej-te-hess', titulo: 'Ley de Hess con el monóxido de carbono', enunciado: 'C(s) + O₂ → CO₂, ΔH₁ = −393,5 kJ; CO + ½ O₂ → CO₂, ΔH₂ = −283,0 kJ (datos didácticos).', pregunta: '¿Cuál es ΔH de C(s) + ½ O₂ → CO, en kJ?', datos: [['ΔH₁', '−393,5 kJ'], ['ΔH₂', '−283,0 kJ']], unidad: 'kJ',
+    analitico: () => -393.5 - -283.0, segundo: () => { const rengCamino = [-393.5, 283.0]; return rengCamino.reduce((rengA, rengB) => rengA + rengB, 0) }, metodoSegundo: 'suma de las etapas con la segunda invertida',
+    pasos: (rengR) => ['Se escribe la reacción 1 tal cual y la 2 invertida (cambia el signo de ΔH₂).', `ΔH = −393,5 + 283,0 = ${rengTx(rengR, 4)} kJ.`], pistas: ['¿Qué reacción hay que invertir?', 'Invertir cambia el signo de ΔH.', 'Suma las reacciones y sus ΔH.'] }),
+  ej({ id: 'ej-te-formacion', titulo: 'ΔH de combustión del etanol', enunciado: 'Con la tabla de la app: ΔHf(C₂H₅OH, l) = −277,0; ΔHf(CO₂) = −393,509; ΔHf(H₂O, l) = −285,8 kJ/mol.', pregunta: '¿Cuál es ΔH de C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O(l), en kJ/mol?', datos: [['ΔHf(etanol)', '−277,0'], ['ΔHf(CO₂)', '−393,509'], ['ΔHf(H₂O)', '−285,8']], unidad: 'kJ/mol',
+    analitico: () => 2 * -393.509 + 3 * -285.8 - -277.0, segundo: () => rengEntalpiaReaccion(R_ETANOL), metodoSegundo: 'función del núcleo con la tabla de entalpías de formación',
+    pasos: (rengR) => ['Productos: 2(−393,509) + 3(−285,8); reactivos: −277,0 (el O₂ vale 0).', `ΔH = ${rengTx(rengR, 5)} kJ/mol.`], pistas: ['Productos menos reactivos.', 'Multiplica por los coeficientes.', 'El O₂ tiene ΔHf = 0.'] }),
+  ej({ id: 'ej-te-enlace', titulo: 'ΔH con energías de enlace', enunciado: 'H₂ + Cl₂ → 2 HCl. Energías de enlace medias (didácticas): H–H 436, Cl–Cl 243, H–Cl 432 kJ/mol.', pregunta: '¿ΔH estimada, en kJ/mol?', datos: [['H–H', '436 kJ/mol'], ['Cl–Cl', '243 kJ/mol'], ['H–Cl', '432 kJ/mol']], unidad: 'kJ/mol',
+    analitico: () => 436 + 243 - 2 * 432, segundo: () => { const rengRotos = [436, 243]; const rengFormados = [432, 432]; return rengRotos.reduce((rengA, rengB) => rengA + rengB, 0) - rengFormados.reduce((rengA, rengB) => rengA + rengB, 0) }, metodoSegundo: 'suma separada de enlaces rotos y formados',
+    pasos: (rengR) => ['ΔH ≈ Σ(enlaces rotos) − Σ(enlaces formados).', `ΔH ≈ (436 + 243) − 2 × 432 = ${rengTx(rengR)} kJ/mol.`], pistas: ['Romper enlaces cuesta energía.', 'Formar enlaces la libera.', 'Rotos menos formados.'] }),
+  ej({ id: 'ej-te-activacion', titulo: 'Efecto de la temperatura en la velocidad', enunciado: 'Una reacción tiene Ea = 50,0 kJ/mol (didáctico). Se calienta de 298 K a 308 K. R = 8,314 J/(mol·K).', pregunta: '¿Por cuánto se multiplica la constante de velocidad? (escribe solo el número)', datos: [['Ea', '50,0 kJ/mol'], ['T', '298 → 308 K']], unidad: '',
+    analitico: () => Math.exp((50000 / RENG_R) * (1 / 298 - 1 / 308)), segundo: () => rengVanTHoff(1, 298, 308, 50), metodoSegundo: 'función del núcleo de dependencia exponencial con la temperatura (misma forma que Arrhenius)',
+    pasos: (rengR) => ['Arrhenius: k₂/k₁ = exp[(Ea/R)·(1/T₁ − 1/T₂)].', `k₂/k₁ = ${rengTx(rengR)}: 10 K más casi duplican la velocidad.`], pistas: ['Usa la ecuación de Arrhenius en forma de cociente.', 'Ea en J/mol.', 'Temperaturas en kelvin.'] }),
+  ej({ id: 'ej-te-espontanea', titulo: 'Espontaneidad de la síntesis del amoníaco', enunciado: `Para N₂ + 3 H₂ → 2 NH₃, la tabla de la app da ΔH = ${rengTx(RENG_DH_NH3, 4)} kJ y ΔS = ${rengTx(RENG_DS_NH3, 5)} J/K.`, pregunta: '¿Cuál es ΔG a 298 K, en kJ?', datos: [['ΔH', `${rengTx(RENG_DH_NH3, 4)} kJ`], ['ΔS', `${rengTx(RENG_DS_NH3, 5)} J/K`], ['T', '298 K']], unidad: 'kJ',
+    analitico: () => RENG_DH_NH3 - (298 * RENG_DS_NH3) / 1000, segundo: () => rengEnergiaLibre(rengEntalpiaReaccion(R_NH3), rengEntropiaReaccion(R_NH3)!, 298), metodoSegundo: 'funciones del núcleo para ΔH, ΔS y ΔG',
+    pasos: (rengR) => ['ΔG = ΔH − T·ΔS (ΔS pasado a kJ/K).', `ΔG = ${rengTx(RENG_DH_NH3, 4)} − 298 × (${rengTx(RENG_DS_NH3 / 1000, 4)}) = ${rengTx(rengR)} kJ: espontánea a 298 K.`], pistas: ['Pasa ΔS a kJ/K.', 'ΔG = ΔH − T·ΔS.', 'Si ΔG < 0, es espontánea.'] }),
+  ej({ id: 'ej-te-entropia', titulo: 'ΔS de formación del agua', enunciado: 'Entropías de la tabla de la app: H₂O(l) 69,91; H₂ 130,68; O₂ 205,15 J/(mol·K).', pregunta: '¿Cuál es ΔS de 2 H₂ + O₂ → 2 H₂O(l), en J/K?', datos: [['S(H₂O, l)', '69,91'], ['S(H₂)', '130,68'], ['S(O₂)', '205,15']], unidad: 'J/K',
+    analitico: () => 2 * 69.91 - 2 * 130.68 - 205.15, segundo: () => rengEntropiaReaccion(R_H2O)!, metodoSegundo: 'función del núcleo con las entropías tabuladas',
+    pasos: (rengR) => ['ΔS = Σ S(productos) − Σ S(reactivos); los elementos no valen 0.', `ΔS = ${rengTx(rengR, 5)} J/K: tres moles de gas pasan a un líquido.`], pistas: ['Las entropías absolutas de los elementos no son 0.', 'Multiplica por coeficientes.', 'Productos menos reactivos.'] }),
+  ej({ id: 'ej-te-gibbs', titulo: 'ΔG de la combustión del metano', enunciado: `Para CH₄ + 2 O₂ → CO₂ + 2 H₂O(l), la tabla de la app da ΔH = ${rengTx(RENG_DH_CH4, 4)} kJ y ΔS = ${rengTx(RENG_DS_CH4, 5)} J/K.`, pregunta: '¿Cuál es ΔG a 298 K, en kJ?', datos: [['ΔH', `${rengTx(RENG_DH_CH4, 4)} kJ`], ['ΔS', `${rengTx(RENG_DS_CH4, 5)} J/K`]], unidad: 'kJ',
+    analitico: () => RENG_DH_CH4 - (298 * RENG_DS_CH4) / 1000, segundo: () => rengEnergiaLibre(rengEntalpiaReaccion(R_CH4), rengEntropiaReaccion(R_CH4)!, 298), metodoSegundo: 'funciones del núcleo para ΔH, ΔS y ΔG',
+    pasos: (rengR) => ['ΔG = ΔH − T·ΔS.', `ΔG = ${rengTx(rengR, 4)} kJ: muy espontánea aunque ΔS < 0, porque domina ΔH.`], pistas: ['Pasa ΔS a kJ/K.', 'Aplica ΔG = ΔH − T·ΔS.', 'Mira qué término domina.'] }),
+  ej({ id: 'ej-te-galvanica', titulo: 'Potencial de la pila de Daniell', enunciado: 'E°(Cu²⁺/Cu) = +0,34 V y E°(Zn²⁺/Zn) = −0,76 V (valores didácticos de uso común).', pregunta: '¿Cuál es E° de la pila Zn | Zn²⁺ ‖ Cu²⁺ | Cu, en V?', datos: [['E°(Cu²⁺/Cu)', '+0,34 V'], ['E°(Zn²⁺/Zn)', '−0,76 V']], unidad: 'V',
+    analitico: () => 0.34 - -0.76, segundo: () => -(-2 * F * 1.1) / (2 * F), metodoSegundo: 'ΔG° = −nFE° calculado y deshecho (comprobación de signos)',
+    pasos: (rengR) => ['El cátodo es el de mayor E° (Cu), el ánodo el menor (Zn).', `E°celda = E°cátodo − E°ánodo = 0,34 − (−0,76) = ${rengTx(rengR)} V.`], pistas: ['¿Cuál se reduce?', 'E° = cátodo − ánodo.', 'Cuida los signos.'] }),
+  ej({ id: 'ej-te-anodo', titulo: 'Potencial con hierro y plata', enunciado: 'E°(Ag⁺/Ag) = +0,80 V y E°(Fe²⁺/Fe) = −0,44 V (didácticos).', pregunta: '¿Cuál es E° de la pila que forman, en V?', datos: [['E°(Ag⁺/Ag)', '+0,80 V'], ['E°(Fe²⁺/Fe)', '−0,44 V']], unidad: 'V',
+    analitico: () => 0.8 - -0.44, segundo: () => Math.abs(-0.44 - 0.8), metodoSegundo: 'valor absoluto de la diferencia, comprobando que el mayor es el cátodo',
+    pasos: (rengR) => ['Cátodo (reducción): Ag⁺/Ag; ánodo (oxidación): Fe/Fe²⁺.', `E° = 0,80 − (−0,44) = ${rengTx(rengR)} V.`], pistas: ['El de mayor E° es el cátodo.', 'En el ánodo hay oxidación.', 'Resta ánodo de cátodo.'] }),
+  ej({ id: 'ej-te-nernst', titulo: 'Pila de Daniell fuera del estándar', enunciado: `En la pila de Daniell (E° = 1,10 V, n = 2) hay [Zn²⁺] = 1,0 y [Cu²⁺] = 0,010 mol/L a 298,15 K. R = 8,314 J/(mol·K), F = ${rengTx(F, 6)} C/mol.`, pregunta: '¿Cuál es el potencial de la celda, en V?', datos: [['E°', '1,10 V'], ['Q', '[Zn²⁺]/[Cu²⁺] = 100'], ['n', '2']], unidad: 'V',
+    analitico: () => 1.1 - ((RENG_R * 298.15) / (2 * F)) * Math.log(100), segundo: () => 1.1 - ((RENG_R * 298.15 * Math.LN10) / (2 * F)) * Math.log10(100), metodoSegundo: 'forma decimal de la ecuación de Nernst (0,0592/n · log Q)',
+    pasos: (rengR) => ['Nernst: E = E° − (RT/nF)·ln Q, con Q = [Zn²⁺]/[Cu²⁺].', `E = 1,10 − 0,0296 × log 100 = ${rengTx(rengR, 4)} V.`], pistas: ['Escribe Q con productos sobre reactivos.', 'Usa la ecuación de Nernst.', 'Menos Cu²⁺, menos potencial.'] }),
+  ej({ id: 'ej-te-electrolisis', titulo: 'Cobre depositado', enunciado: `Se pasa una corriente de 2,00 A durante 60,0 min por una disolución de Cu²⁺. M(Cu) = 63,55 g/mol; F = ${rengTx(F, 6)} C/mol.`, pregunta: '¿Qué masa de cobre se deposita, en g?', datos: [['I', '2,00 A'], ['t', '60,0 min'], ['Electrones por Cu', '2']], unidad: 'g',
+    analitico: () => ((2 * 3600) / F / 2) * 63.55, segundo: () => rengLecturasElectrolisis({ I: 2, t: 60, z: 2, M: 63.55, ef: 100 }).m!, metodoSegundo: 'escena de electrólisis con los mismos datos',
+    pasos: (rengR) => [`Q = 2,00 × 3600 = 7200 C; n(e⁻) = ${rengTx(7200 / F, 4)} mol.`, `n(Cu) = n(e⁻)/2; m = ${rengTx(rengR)} g.`], pistas: ['Q = I·t con t en segundos.', 'Pasa la carga a moles de e⁻.', 'Dos electrones por cada Cu.'] }),
+  ej({ id: 'ej-te-faraday', titulo: 'Carga para obtener aluminio', enunciado: `Se quieren depositar 2,70 g de aluminio (26,98 g/mol, Al³⁺ + 3 e⁻ → Al). F = ${rengTx(F, 6)} C/mol.`, pregunta: '¿Qué carga hace falta, en C?', datos: [['Al', '2,70 g'], ['Electrones por Al', '3']], unidad: 'C',
+    analitico: () => (2.7 / 26.98) * 3 * F, segundo: () => rengBiseccion((rengT) => rengLecturasElectrolisis({ I: 1, t: rengT, z: 3, M: 26.98, ef: 100 }).m! - 2.7, 1e-6, 1e6) * 60, metodoSegundo: 'búsqueda por bisección del tiempo a 1 A en la escena de electrólisis',
+    pasos: (rengR) => [`n(Al) = ${rengTx(2.7 / 26.98, 4)} mol; n(e⁻) = 3 × n(Al).`, `Q = n(e⁻)·F = ${rengTx(rengR)} C.`], pistas: ['Pasa la masa a moles.', 'Tres electrones por átomo.', 'Q = n(e⁻)·F.'] }),
+  ej({ id: 'ej-te-corrosion', titulo: 'Hierro perdido por corrosión', enunciado: `Una corriente de corrosión de 0,500 mA actúa sobre una pieza de hierro (Fe → Fe²⁺ + 2 e⁻, 55,85 g/mol) durante 365 días. F = ${rengTx(F, 6)} C/mol.`, pregunta: '¿Qué masa de hierro se oxida, en g?', datos: [['I', '0,500 mA'], ['t', '365 días'], ['Electrones por Fe', '2']], unidad: 'g',
+    analitico: () => ((0.0005 * 365 * 86400) / F / 2) * 55.85, segundo: () => rengLecturasElectrolisis({ I: rengConvertir(0.5, 'mA', 'A'), t: 365 * 24 * 60, z: 2, M: 55.85, ef: 100 }).m!, metodoSegundo: 'escena de electrólisis con mA pasados a A por el catálogo',
+    pasos: (rengR) => [`Q = 5,00·10⁻⁴ A × ${rengTx(365 * 86400)} s = ${rengTx(0.0005 * 365 * 86400)} C.`, `m(Fe) = Q/(2F) × 55,85 = ${rengTx(rengR)} g.`], pistas: ['Pasa los días a segundos.', 'Usa Q = I·t con t en segundos.', 'Dos electrones por Fe.'] }),
+  ej({ id: 'ej-te-bateria', titulo: 'Energía de una pila', enunciado: 'Una pila de 1,50 V entrega 2,00 A·h de carga.', pregunta: '¿Cuánta energía eléctrica entrega, en kJ?', datos: [['Voltaje', '1,50 V'], ['Carga', '2,00 A·h']], unidad: 'kJ',
+    analitico: () => (1.5 * 2 * 3600) / 1000, segundo: () => rengConvertir(1.5 * 2 * rengConvertir(1, 'h', 's'), 'J', 'kJ'), metodoSegundo: 'horas pasadas a segundos y julios a kJ con el catálogo',
+    pasos: (rengR) => ['2,00 A·h = 2,00 A × 3600 s = 7200 C.', `E = V·Q = 1,50 × 7200 = ${rengTx(rengR * 1000)} J = ${rengTx(rengR)} kJ.`], pistas: ['Pasa A·h a culombios.', 'Energía = voltaje × carga.', 'Pasa J a kJ.'] })
+]
+
+export const RENG_K_NH3_298 = rengConstanteDeG(RENG_DH_NH3 - (298 * RENG_DS_NH3) / 1000, 298)

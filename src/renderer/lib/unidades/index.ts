@@ -1,0 +1,5 @@
+export * from './dimension'
+export * from './catalogo'
+export * from './analizador'
+export * from './conversion'
+export * from './propias'
